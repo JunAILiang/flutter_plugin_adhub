@@ -1,8 +1,8 @@
 name: flutter_plugin_adhub
 description: A new Flutter plugin.
 version: 0.0.1
-author:
-homepage:
+author: gzliujm@163.com
+homepage: https://github.com/JunAILiang/flutter_plugin_adhub
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
