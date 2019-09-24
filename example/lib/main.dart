@@ -26,8 +26,8 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
-    Adhub.initialize("276");
-    Adhub.openTheAdHubLog();
+    Adhub.initialize("277");
+//    Adhub.openTheAdHubLog();
 
   }
 
@@ -41,21 +41,32 @@ class _MyAppState extends State<MyApp> {
         floatingActionButton: FloatingActionButton(
           onPressed: (){
             if (isPlaying) {
-              AdhubReward().showRewardedVideoAd();
+//              AdhubReward().showRewardedVideoAd();
 //              FlutterPluginAdhub.showRewardedVideoAd();
+              adhubReward.showRewardedVideoAd();
             } else {
               isPlaying = true;
+
               adhubReward = AdhubReward(
-                videoAdId: "933",
-                listener: (AdHubEvents event, Map<String, dynamic> args) {
-                  if (event == AdHubEvents.videoDidRewardUserWithReward) {
-                    adhubReward.loadRewardedVideoAd();
-                  }
-                  print("我走到了回到---------------");
+                videoAdId: "978",
+                listener: (AdHubEvents evnet, Map<String, dynamic> args) {
+                  print("我走到了这个回调");
                 }
               );
-
               adhubReward.loadRewardedVideoAd();
+//              Adhub.openTheAdHubLog();
+//              isPlaying = true;
+//              adhubReward = AdhubReward(
+//                videoAdId: "933",
+//                listener: (AdHubEvents event, Map<String, dynamic> args) {
+//                  if (event == AdHubEvents.videoDidRewardUserWithReward) {
+//                    adhubReward.loadRewardedVideoAd();
+//                  }
+//                  print("我走到了回到---------------");
+//                }
+//              );
+//
+//              adhubReward.loadRewardedVideoAd();
               //              FlutterPluginAdhub.loadRewardedVideoAd("933");
             }
 

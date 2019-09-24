@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.maoge.flutter_plugin_adhub_example">
 
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
@@ -6,10 +7,25 @@
          In most cases you can leave this as-is, but you if you want to provide
          additional functionality it is fine to subclass or reimplement
          FlutterApplication and put your custom class here. -->
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="flutter_plugin_adhub_example"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        tools:replace="android:label"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -29,5 +45,67 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <!-- AdHub Ad -->
+
+        <activity
+            android:name="com.hubcloud.adhubsdk.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@style/AdhubDialogStyle" />
+        <service
+            android:name="com.hubcloud.adhubsdk.DownloadService"
+            android:exported="false" />
+
+        <!-- Fmobi Ad -->
+
+        <activity     android:name="com.ly.adpoymer.activity.LyVideoActivity" />
+
+        <!-- gdt Ad -->
+
+        <activity
+            android:name="com.qq.e.ads.ADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.qq.e.ads.PortraitADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.qq.e.ads.LandscapeADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape" />
+        <service
+            android:name="com.qq.e.comm.DownloadService"
+            android:exported="false" />
+        <!--如果targetSdkVersion设置值>=24，则必须添加以下provider，否则会影响app变现效率-->
+        <!--请开发者根据自己PackageName来替换${applicationId}这个字段-->
+        <!--特别注意这个authorities中的fileprovider为全部小写-->
+        <!--<provider-->
+            <!--android:name="android.support.v4.content.FileProvider"-->
+            <!--android:authorities="${applicationId}.fileprovider"-->
+            <!--android:exported="false"-->
+            <!--android:grantUriPermissions="true">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                <!--android:resource="@xml/gdt_file_path" />-->
+        <!--</provider>-->
+
+        <!-- baidu Ad -->
+
+        <activity
+            android:name="com.baidu.mobads.AppActivity"
+            android:configChanges="screenSize|keyboard|keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--如果targetSdkVersion设置值>=24，则必须添加以下provider，否则会影响app变现效率-->
+        <!--请开发者根据自己PackageName来替换${applicationId}这个字段-->
+        <provider
+            android:name="com.baidu.mobads.openad.FileProvider"
+            android:authorities="com.maoge.flutter_plugin_adhub_example.bd.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/bd_file_paths" />
+        </provider>
+
     </application>
 </manifest>
