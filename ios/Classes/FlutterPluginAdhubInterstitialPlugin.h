@@ -1,8 +1,8 @@
 //
-//  FlutterPluginAdhubRewardPlugin.h
+//  FlutterPluginAdhubInterstitialPlugin.h
 //  Pods
 //
-//  Created by LJM on 2019/9/19.
+//  Created by LJM on 2019/9/25.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,13 +11,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FlutterPluginAdhubRewardPlugin : NSObject<FlutterPlugin>
+@interface FlutterPluginAdhubInterstitialPlugin : NSObject<FlutterPlugin>
 
 @end
 
 
-
-@interface FlutterPluginAdhubRewardPluginDelegate : NSObject<AdHubRewardedVideoDelegate>
+@interface FlutterPluginAdhubInterstitialPluginDelegate : NSObject<AdHubInterstitialDelegate>
 
 - (instancetype)initWithPluginDelegateWithChannel:(FlutterMethodChannel *)channel;
 

@@ -7,23 +7,23 @@ abstract class AdHubEventHandler {
 
   Future<dynamic> handleEvent(MethodCall call) async {
     switch (call.method) {
-      case 'videoDidReceiveAd':
-        _listener(AdHubEvents.videoDidReceiveAd, null);
+      case 'didReceiveAd':
+        _listener(AdHubEvents.didReceiveAd, null);
         break;
-      case 'videoDidStartPlay':
-        _listener(AdHubEvents.videoDidStartPlay, null);
+      case 'didStartPlay':
+        _listener(AdHubEvents.didStartPlay, null);
         break;
-      case 'videoDidClick':
-        _listener(AdHubEvents.videoDidClick, null);
+      case 'didClick':
+        _listener(AdHubEvents.didClick, null);
         break;
-      case 'videoDidDismissScreen':
-        _listener(AdHubEvents.videoDidDismissScreen, null);
+      case 'didDismissScreen':
+        _listener(AdHubEvents.didDismissScreen, null);
         break;
-      case 'videoDidError':
-        _listener(AdHubEvents.videoDidError, null);
+      case 'didError':
+        _listener(AdHubEvents.didError, null);
         break;
-      case 'videoDidRewardUserWithReward':
-        _listener(AdHubEvents.videoDidRewardUserWithReward, null);
+      case 'didRewardUserWithReward':
+        _listener(AdHubEvents.didRewardUserWithReward, null);
         break;
     }
 
@@ -35,10 +35,10 @@ abstract class AdHubEventHandler {
 
 
 enum AdHubEvents {
-  videoDidReceiveAd,
-  videoDidStartPlay,
-  videoDidClick,
-  videoDidDismissScreen,
-  videoDidError,
-  videoDidRewardUserWithReward,
+  didReceiveAd,
+  didStartPlay,
+  didClick,
+  didDismissScreen,
+  didError,
+  didRewardUserWithReward,
 }

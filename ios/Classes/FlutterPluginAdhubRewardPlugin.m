@@ -6,7 +6,6 @@
 //
 
 #import "FlutterPluginAdhubRewardPlugin.h"
-//#import "FlutterPluginAdhubRewardPluginDelegate"
 
 @class FlutterPluginAdhubRewardPluginDelegate;
 @interface FlutterPluginAdhubRewardPlugin ()
@@ -15,6 +14,8 @@
 @property (nonatomic, strong) AdHubRewardedVideo *rewardedVideo;
 /** registrar **/
 @property (nonatomic, strong) NSObject<FlutterPluginRegistrar> *registrar;
+/** channel **/
+@property (nonatomic, strong) FlutterMethodChannel *channel;
 /** 代理 **/
 @property (nonatomic, strong) FlutterPluginAdhubRewardPluginDelegate *pluginDelegate;
 
@@ -43,10 +44,11 @@ static FlutterPluginAdhubRewardPlugin *instance = nil;
     
     [FlutterPluginAdhubRewardPlugin sharedInstance].registrar = registrar;
     
-    FlutterMethodChannel* channel = [FlutterMethodChannel
+    
+    [FlutterPluginAdhubRewardPlugin sharedInstance].channel = [FlutterMethodChannel
                                      methodChannelWithName:@"adhub_flutter/reward"
                                      binaryMessenger:[registrar messenger]];
-    [registrar addMethodCallDelegate:[FlutterPluginAdhubRewardPlugin sharedInstance] channel:channel];
+    [registrar addMethodCallDelegate:[FlutterPluginAdhubRewardPlugin sharedInstance] channel:[FlutterPluginAdhubRewardPlugin sharedInstance].channel];
     
 }
 
@@ -55,17 +57,12 @@ static FlutterPluginAdhubRewardPlugin *instance = nil;
     if ([@"loadRewardedVideoAd" isEqualToString:call.method]) {
         NSString *adId = [NSString stringWithFormat:@"%@",call.arguments];
         self.rewardedVideo = [[AdHubRewardedVideo alloc] initWithSpaceID:adId spaceParam:@""];
-        FlutterMethodChannel *channel = [FlutterMethodChannel
-                                         methodChannelWithName:@"adhub_flutter/reward_jm"
-                                         binaryMessenger:[[FlutterPluginAdhubRewardPlugin sharedInstance].registrar messenger]];
-        self.pluginDelegate = [[FlutterPluginAdhubRewardPluginDelegate alloc] initWithPluginDelegateWithChannel:channel];
+        self.pluginDelegate = [[FlutterPluginAdhubRewardPluginDelegate alloc] initWithPluginDelegateWithChannel:[FlutterMethodChannel methodChannelWithName:@"adhub_flutter/reward_jm" binaryMessenger:[[FlutterPluginAdhubRewardPlugin sharedInstance].registrar messenger]]];
         self.rewardedVideo.delegate = self.pluginDelegate;
         self.rewardedVideo.adHubRewardedVideoViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
         [self.rewardedVideo ADH_loadRewardedVideoAd];
     } else if ([@"showRewardedVideoAd" isEqualToString:call.method]) {
         [self.rewardedVideo ADH_showRewardedVideoAd];
-    } else if ([@"setListener" isEqualToString:call.method]) {
-        //NSLog(@"开始监听");
     }
 }
 
@@ -88,35 +85,35 @@ static FlutterPluginAdhubRewardPlugin *instance = nil;
  激励视频物料请求成功
  */
 - (void)ADH_rewardedVideoDidReceiveAd:(AdHubRewardedVideo *)adHubRewardedVideo {
-    [self.channel invokeMethod:@"videoDidReceiveAd" arguments:nil];
+    [self.channel invokeMethod:@"didReceiveAd" arguments:nil];
 }
 
 /**
  激励展现并开始播放视频
  */
 - (void)ADH_rewardedVideoDidStartPlay:(AdHubRewardedVideo *)adHubRewardedVideo {
-    [self.channel invokeMethod:@"videoDidStartPlay" arguments:nil];
+    [self.channel invokeMethod:@"didStartPlay" arguments:nil];
 }
 
 /**
  激励视频点击
  */
 - (void)ADH_rewardedVideoDidClick:(AdHubRewardedVideo *)adHubRewardedVideo {
-    [self.channel invokeMethod:@"videoDidClick" arguments:nil];
+    [self.channel invokeMethod:@"didClick" arguments:nil];
 }
 
 /**
  激励视频消失
  */
 - (void)ADH_rewardedVideoDidDismissScreen:(AdHubRewardedVideo *)adHubRewardedVideo {
-    [self.channel invokeMethod:@"videoDidDismissScreen" arguments:nil];
+    [self.channel invokeMethod:@"didDismissScreen" arguments:nil];
 }
 
 /**
  激励视频请求失败
  */
 - (void)ADH_rewardedVideo:(AdHubRewardedVideo *)adHubRewardedVideo didFailToLoadAdWithError:(AdHubRequestError *)error {
-    [self.channel invokeMethod:@"videoDidError" arguments:nil];
+    [self.channel invokeMethod:@"didError" arguments:nil];
 }
 
 /**
@@ -125,7 +122,7 @@ static FlutterPluginAdhubRewardPlugin *instance = nil;
  @param reward 奖励内容 JSON字符串，自行解析
  */
 - (void)ADH_rewardedVideo:(AdHubRewardedVideo *)adHubRewardedVideo didRewardUserWithReward:(NSObject *)reward {
-    [self.channel invokeMethod:@"videoDidRewardUserWithReward" arguments:nil];
+    [self.channel invokeMethod:@"didRewardUserWithReward" arguments:nil];
 }
 
 @end

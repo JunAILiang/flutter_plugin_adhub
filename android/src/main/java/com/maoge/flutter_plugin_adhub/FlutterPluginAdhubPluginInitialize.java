@@ -19,7 +19,6 @@ public class FlutterPluginAdhubPluginInitialize extends FlutterPluginAdhubPlugin
     @Override
     public void onMethodCall(MethodCall call, MethodChannel.Result result) {
         if (call.method.equals("initialize")) {
-            Log.e("test","我走进了初始化方法----"+call.arguments.toString());
             AdUtil.initialize(call.arguments.toString());
         }
     }

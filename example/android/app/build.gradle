@@ -67,11 +67,14 @@ flutter {
 
 dependencies {
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+//    androidTestImplementation 'androidx.test:runner:1.1.1'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     //--adhub广告相关start--
     implementation(name: 'adhub_sdk_3.2.2', ext: 'aar')
     implementation files('libs/GDTSDK.union.4.63.933.jar')
+//    implementation files('libs/android-support-v4.jar')
+//    implementation 'com.android.support:support-v4:28.1.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation(name: 'adpoymer-4.1.25', ext: 'aar')
     implementation(name: 'Baidu_MobAds_SDKV5.81', ext: 'aar')
     //--adhub广告相关end--

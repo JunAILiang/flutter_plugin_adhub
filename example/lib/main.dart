@@ -17,6 +17,7 @@ class _MyAppState extends State<MyApp> {
   bool isPlaying = false;
 
   AdhubReward adhubReward;
+  AdhubInterstitial interstitial;
 
   @override
   void initState() {
@@ -26,7 +27,7 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
-    Adhub.initialize("277");
+    Adhub.initialize("3068");
 //    Adhub.openTheAdHubLog();
 
   }
@@ -43,31 +44,41 @@ class _MyAppState extends State<MyApp> {
             if (isPlaying) {
 //              AdhubReward().showRewardedVideoAd();
 //              FlutterPluginAdhub.showRewardedVideoAd();
-              adhubReward.showRewardedVideoAd();
+//              adhubReward.showRewardedVideoAd();
             } else {
               isPlaying = true;
 
-              adhubReward = AdhubReward(
-                videoAdId: "978",
-                listener: (AdHubEvents evnet, Map<String, dynamic> args) {
-                  print("我走到了这个回调");
-                }
-              );
-              adhubReward.loadRewardedVideoAd();
-//              Adhub.openTheAdHubLog();
-//              isPlaying = true;
 //              adhubReward = AdhubReward(
-//                videoAdId: "933",
+//                videoAdId: "9070",
 //                listener: (AdHubEvents event, Map<String, dynamic> args) {
-//                  if (event == AdHubEvents.videoDidRewardUserWithReward) {
-//                    adhubReward.loadRewardedVideoAd();
+//                  print("我走到了这个回调");
+//                  print(event);
+//                  if (event == AdHubEvents.didError) {
+//
+//                  } else if (event == AdHubEvents.didReceiveAd) {
+//                    adhubReward.showRewardedVideoAd();
 //                  }
-//                  print("我走到了回到---------------");
 //                }
 //              );
 //
 //              adhubReward.loadRewardedVideoAd();
-              //              FlutterPluginAdhub.loadRewardedVideoAd("933");
+
+
+              interstitial = AdhubInterstitial(
+                interstitialAdId: "9072",
+                listener: (AdHubEvents event, Map<String, dynamic> args) {
+                  print("我走到了这个回调");
+                  print(event);
+                  if (event == AdHubEvents.didError) {
+
+                  } else if (event == AdHubEvents.didReceiveAd) {
+                    interstitial.showInterstitialAd();
+                  }
+                }
+              );
+
+              interstitial.loadInterstitialAd();
+
             }
 
             setState(() {

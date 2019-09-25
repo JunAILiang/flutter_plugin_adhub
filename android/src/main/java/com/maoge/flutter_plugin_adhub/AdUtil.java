@@ -18,6 +18,7 @@ import java.lang.reflect.Method;
 
 public class AdUtil {
 
+    /** 钩子接口 **/
     public interface Gouzi{
         /** 初始化app **/
         void initialize(String appId);
@@ -26,87 +27,57 @@ public class AdUtil {
         void loadRewardedVideoAd(String adId);
         /** 显示视频广告 **/
         void showRewardedVideoAd();
+
+        /** 加载插屏广告 **/
+        void loadInterstitialAd(String adId);
+        /** 显示插屏广告 **/
+        void showInterstitialAd();
     }
 
+    /** 钩子初始化 **/
     private static Gouzi gouzi;
     public static void setGouzi(Gouzi gouzi){
         AdUtil.gouzi = gouzi;
     }
 
+    /** 初始化adhub **/
     public static void initialize(String appId){
         if (gouzi!=null){
             gouzi.initialize(appId);
         }
     }
 
-    //private static RewardedVideoAd mRewardedVideoAd;
 
+    /** 加载视频广告 **/
     public static void loadRewardedVideoAd(final String adId){
         if (gouzi!=null){
             gouzi.loadRewardedVideoAd(adId);
         }
-
-        /*mRewardedVideoAd = AdHub.getRewardedVideoAdInstance(getContext());
-
-        mRewardedVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
-            @Override
-            public void onRewarded(RewardItem rewardItem) {
-                Log.d("lance", "onRewarded:" + rewardItem.getType() + "==" + rewardItem.getAmount());
-            }
-
-            @Override
-            public void onRewardedVideoAdClosed() {
-                Log.d("lance", "onRewardedVideoAdClosed");
-                //TODO 关闭广告后自动加载下一个广告
-                load(adId);
-            }
-
-            @Override
-            public void onRewardedVideoAdShown() {
-                Log.d("lance", "onRewardedVideoAdShown");
-            }
-
-            @Override
-            public void onRewardedVideoAdFailedToLoad(int i) {
-                Log.d("lance", "onRewardedVideoAdFailedToLoad:" + i);
-            }
-
-            @Override
-            public void onRewardedVideoAdLeftApplication() {
-                Log.d("lance", "onRewardedVideoAdLeftApplication");
-            }
-
-            @Override
-            public void onRewardedVideoAdLoaded() {
-                Log.d("lance", "onRewardedVideoAdLoaded");
-                if (mRewardedVideoAd.isLoaded()) {
-                    mRewardedVideoAd.show();
-                }
-            }
-
-            @Override
-            public void onRewardedVideoAdOpened() {
-                Log.d("lance", "onRewardedVideoAdOpened");
-            }
-
-            @Override
-            public void onRewardedVideoStarted() {
-                Log.d("lance", "onRewardedVideoStarted");
-            }
-        });
-
-        if (!mRewardedVideoAd.isLoaded()) {
-            mRewardedVideoAd.loadAd(adId, new AdRequest.Builder().build());
-        }*/
     }
+    /** 展示视频广告 **/
     public static void showRewardedVideoAd(){
         if (gouzi!=null){
             gouzi.showRewardedVideoAd();
         }
-        /*if (mRewardedVideoAd.isLoaded()) {
-            mRewardedVideoAd.show();
-        }*/
     }
+
+
+    /** 加载插屏广告 **/
+    public static void loadInterstitialAd(final String adId) {
+        if (gouzi != null) {
+            gouzi.loadInterstitialAd(adId);
+        }
+    }
+    /** 展示插屏广告 **/
+    public static void showInterstitialAd() {
+        if (gouzi != null) {
+            gouzi.showInterstitialAd();
+        }
+    }
+
+
+
+
 
     /**
      * Context对象
