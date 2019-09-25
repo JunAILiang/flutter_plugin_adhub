@@ -2,57 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a14554f-67c4-4056-ab51-2964db053daa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/maoge/flutter_plugin_adhub/FlutterPluginAdhubInterstitialPlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/android/app/src/main/java/com/maoge/util/AdhubInterstitialUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/android/app/src/main/java/com/maoge/util/AdhubVideoUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/android/app/src/main/java/com/maoge/util/L.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/android/src/main/java/com/maoge/flutter_plugin_adhub/FlutterPluginAdhubInterstitialPlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/example/android/app/src/main/java/com/maoge/util/AdhubInterstitialUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/example/android/app/src/main/java/com/maoge/util/AdhubVideoUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/example/android/app/src/main/java/com/maoge/util/L.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/ios/Classes/FlutterPluginAdhubInterstitialPlugin.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/ios/Classes/FlutterPluginAdhubInterstitialPlugin.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/lib/src/adhub_interstitial.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Classes/FlutterPluginAdhubInterstitialPlugin.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Classes/FlutterPluginAdhubInterstitialPlugin.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/adhub_interstitial.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/maoge/flutter_plugin_adhub/AdUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/maoge/flutter_plugin_adhub/AdUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/maoge/flutter_plugin_adhub/FlutterPluginAdhubPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/maoge/flutter_plugin_adhub/FlutterPluginAdhubPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/maoge/flutter_plugin_adhub/FlutterPluginAdhubPluginInitialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/maoge/flutter_plugin_adhub/FlutterPluginAdhubPluginInitialize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/maoge/flutter_plugin_adhub/FlutterPluginAdhubRewardPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/maoge/flutter_plugin_adhub/FlutterPluginAdhubRewardPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/com/maoge/flutter_plugin_adhub_example/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/java/com/maoge/flutter_plugin_adhub_example/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/android/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/android/src/main/java/com/maoge/flutter_plugin_adhub/AdUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/android/src/main/java/com/maoge/flutter_plugin_adhub/AdUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/android/src/main/java/com/maoge/flutter_plugin_adhub/FlutterPluginAdhubPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/android/src/main/java/com/maoge/flutter_plugin_adhub/FlutterPluginAdhubPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/android/src/main/java/com/maoge/flutter_plugin_adhub/FlutterPluginAdhubRewardPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/android/src/main/java/com/maoge/flutter_plugin_adhub/FlutterPluginAdhubRewardPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/example/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/example/android/app/src/main/java/com/maoge/flutter_plugin_adhub_example/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/example/android/app/src/main/java/com/maoge/flutter_plugin_adhub_example/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/example/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/ios/Classes/FlutterPluginAdhubPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/ios/Classes/FlutterPluginAdhubPlugin.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/ios/Classes/FlutterPluginAdhubRewardPlugin.h" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/ios/Classes/FlutterPluginAdhubRewardPlugin.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/ios/Classes/FlutterPluginAdhubRewardPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/ios/Classes/FlutterPluginAdhubRewardPlugin.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/lib/flutter_plugin_adhub.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/lib/flutter_plugin_adhub.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/lib/src/adhub_event_handler.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutter_plugin_adhub/lib/src/adhub_event_handler.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/FlutterPluginAdhubPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/FlutterPluginAdhubPlugin.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/FlutterPluginAdhubRewardPlugin.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/FlutterPluginAdhubRewardPlugin.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/FlutterPluginAdhubRewardPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/FlutterPluginAdhubRewardPlugin.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/flutter_plugin_adhub.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flutter_plugin_adhub.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/adhub_event_handler.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/adhub_event_handler.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +19,7 @@
     <session id="2142369663">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.opened" value="2" />
@@ -242,7 +193,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="5" />
-    <option name="y" value="27" />
+    <option name="y" value="26" />
     <option name="width" value="1252" />
     <option name="height" value="794" />
   </component>

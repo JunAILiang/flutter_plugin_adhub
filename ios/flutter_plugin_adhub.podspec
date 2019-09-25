@@ -16,20 +16,34 @@ A new Flutter plugin.
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
 
-  s.ios.vendored_frameworks = 'Frameworks/AdHubSDK.framework'
-  s.vendored_frameworks = 'AdHubSDK.framework'
-  s.ios.resource = 'Frameworks/baidumobadsdk.bundle'
-  s.resource = 'baidumobadsdk.bundle'
-  s.ios.vendored_frameworks = 'Frameworks/BaiduMobAdSDK.framework'
-  s.vendored_frameworks = 'BaiduMobAdSDK.framework'
-  s.ios.resource = 'Frameworks/FmobiBundle.bundle'
-  s.resource = 'FmobiBundle.bundle'
-  s.ios.vendored_libraries = 'Frameworks/libFalconAdSDK.a'
-  s.vendored_libraries = 'libFalconAdSDK.a'
-  s.ios.vendored_libraries = 'Frameworks/libGDTMobSDK.a'
-  s.vendored_libraries = 'libGDTMobSDK.a'
-  s.ios.vendored_libraries = 'Frameworks/libProtobuf.a'
-  s.vendored_libraries = 'libProtobuf.a'
+  s.vendored_frameworks = [
+  'Frameworks/AdHubSDK.framework',
+  'Frameworks/BaiduMobAdSDK.framework'
+  ]
+  s.vendored_libraries = [
+  'Frameworks/libFalconAdSDK.a',
+  'Frameworks/libGDTMobSDK.a',
+  'Frameworks/libProtobuf.a'
+  ]
+  s.resource = [
+  'Frameworks/baidumobadsdk.bundle',
+  'Frameworks/FmobiBundle.bundle'
+  ]
+
+  # s.ios.vendored_frameworks = 'Frameworks/AdHubSDK.framework'
+  # s.vendored_frameworks = 'AdHubSDK.framework'
+  # s.ios.resource = 'Frameworks/baidumobadsdk.bundle'
+  # s.resource = 'baidumobadsdk.bundle'
+  # s.ios.vendored_frameworks = 'Frameworks/BaiduMobAdSDK.framework'
+  # s.vendored_frameworks = 'BaiduMobAdSDK.framework'
+  # s.ios.resource = 'Frameworks/FmobiBundle.bundle'
+  # s.resource = 'FmobiBundle.bundle'
+  # s.ios.vendored_libraries = 'Frameworks/libFalconAdSDK.a'
+  # s.vendored_libraries = 'libFalconAdSDK.a'
+  # s.ios.vendored_libraries = 'Frameworks/libGDTMobSDK.a'
+  # s.vendored_libraries = 'libGDTMobSDK.a'
+  # s.ios.vendored_libraries = 'Frameworks/libProtobuf.a'
+  # s.vendored_libraries = 'libProtobuf.a'
 
   s.ios.deployment_target = '8.0'
 end
