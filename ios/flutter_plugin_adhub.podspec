@@ -45,6 +45,9 @@ A new Flutter plugin.
   # s.ios.vendored_libraries = 'Frameworks/libProtobuf.a'
   # s.vendored_libraries = 'libProtobuf.a'
 
+  s.static_framework = true
+
+
   s.ios.deployment_target = '8.0'
 end
 
