@@ -24,7 +24,6 @@ class AdhubInterstitial extends AdHubEventHandler {
 
   /// 加载插屏广告
   void loadInterstitialAd() {
-    print("加载广告$interstitialAdId");
     _channel.invokeMethod('loadInterstitialAd', interstitialAdId);
   }
 

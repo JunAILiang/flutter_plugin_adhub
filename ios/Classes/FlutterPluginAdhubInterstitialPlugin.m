@@ -39,8 +39,6 @@ static FlutterPluginAdhubInterstitialPlugin *instance = nil;
 }
 
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
-    NSLog(@"走了int这个初始化方法");
-    
     [FlutterPluginAdhubInterstitialPlugin sharedInstance].registrar = registrar;
     FlutterMethodChannel* channel = [FlutterMethodChannel
                                                                methodChannelWithName:@"adhub_flutter/interstitial"
@@ -50,9 +48,7 @@ static FlutterPluginAdhubInterstitialPlugin *instance = nil;
 }
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
-    NSLog(@"走不进这个回调啊");
     if ([@"loadInterstitialAd" isEqualToString:call.method]) {
-        NSLog(@"这是加载插屏的方法");
         NSString *adId = [NSString stringWithFormat:@"%@",call.arguments];
         self.interstitial = [[AdHubInterstitial alloc] initWithSpaceID:adId spaceParam:@""];
         self.interstitial.adhubInterstitialController = [UIApplication sharedApplication].delegate.window.rootViewController;
